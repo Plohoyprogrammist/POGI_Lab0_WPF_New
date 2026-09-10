@@ -20,5 +20,21 @@ namespace POGI_Lab0_WPF_New
         {
             InitializeComponent();
         }
+
+        public void DrawLine(Point2D p1, Point2D p2)
+        {
+            //Создание новой линии
+            Line line = new Line();
+            //Цвет и толщина линии
+            line.Stroke = Brushes.Red;
+            line.StrokeThickness = 3;
+            //Установка координат линии из координат точек Point2D
+            line.X1 = p1.X;
+            line.Y1 = p1.Y;
+            line.X2 = p2.X;
+            line.Y2 = p2.Y;
+            //Добавление линии в Canvas
+            Scene.Children.Add(line);
+        }
     }
 }
