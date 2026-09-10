@@ -19,6 +19,8 @@ namespace POGI_Lab0_WPF_New
         Triangle tr;
         Random rnd = new Random();
         Rectangle rect;
+        Triangle tr2;
+        Rectangle rect2;
 
         public MainWindow()
         {
@@ -35,6 +37,18 @@ namespace POGI_Lab0_WPF_New
             Point2D p4 = new Point2D(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
             rect = new Rectangle(p1, p2, p3, p4);
             DrawRectangle(rect);
+
+            p1 = new Point2D(25, 25);
+            p2 = new Point2D(50, 50);
+            p3 = new Point2D(75, 25);
+            tr2 = new Triangle(p1, p2, p3);
+            DrawTriangle(tr2);
+            p1 = new Point2D(100, 25);
+            p2 = new Point2D(200, 25);
+            p3 = new Point2D(200, 50);
+            p4 = new Point2D(100, 50);
+            rect2 = new Rectangle(p1, p2, p3, p4);
+            DrawRectangle(rect2);
         }
 
         public void DrawLine(Point2D p1, Point2D p2)
