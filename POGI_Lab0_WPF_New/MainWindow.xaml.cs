@@ -52,6 +52,10 @@ namespace POGI_Lab0_WPF_New
             DrawLine(tr.P3, tr.P1);
         }
 
-
+        public void ClearScene()
+        {
+            //Очистка Canvas от всех объектов
+            Scene.Children.Clear();
+        }
     }
 }
