@@ -34,6 +34,7 @@ namespace POGI_Lab0_WPF_New
             p3 = new Point2D(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
             Point2D p4 = new Point2D(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
             rect = new Rectangle(p1, p2, p3, p4);
+            DrawRectangle(rect);
         }
 
         public void DrawLine(Point2D p1, Point2D p2)
@@ -61,7 +62,10 @@ namespace POGI_Lab0_WPF_New
 
         public void DrawRectangle(Rectangle rect)
         {
-            
+            DrawLine(rect.P1, rect.P2);
+            DrawLine(rect.P2, rect.P3);
+            DrawLine(rect.P3, rect.P4);
+            DrawLine(rect.P4, rect.P1);
         }
 
         public void ClearScene()
